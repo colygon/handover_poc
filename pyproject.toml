@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "swast-handover-crew"
+version = "1.0.0"
+description = "SWAST Hospital Handover Delays Analysis with CrewAI"
+authors = ["Agent 55 <agent55@swast.nhs.uk>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.28.0"
+pandas = "^2.0.0"
+plotly = "^5.17.0"
+openpyxl = "^3.1.0"
+crewai = ">=0.86.0"
+langchain-openai = ">=0.3.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.scripts]
+swast-crew = "swast_crew.main:run"
+swast-crew-train = "swast_crew.main:train"
+swast-crew-replay = "swast_crew.main:replay"
+swast-crew-test = "swast_crew.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,75 @@
+analyze_handover_delays:
+  description: >
+    Analyze the current handover delay data for {hospital_name}.
+
+    Calculate the following metrics:
+    - Total outstanding handovers
+    - Average handover duration
+    - Hours lost due to delays over 15 minutes
+    - Distribution of handovers by time bucket (0-15, 15-30, 30-60, 60-90, 90+ mins)
+    - Percentage of handovers meeting the 15-minute target
+
+    Identify patterns such as:
+    - Peak delay times during the day
+    - Hospitals with the highest delays
+    - Trends compared to previous periods
+
+    Provide insights into the root causes of delays and recommend
+    data-driven interventions.
+  expected_output: >
+    A comprehensive analysis report containing:
+    1. Summary statistics of handover delays
+    2. Key performance metrics with trend comparisons
+    3. Identified patterns and bottlenecks
+    4. Data-driven recommendations for reducing delays
+    5. Priority areas requiring immediate attention
+
+monitor_performance:
+  description: >
+    Monitor current handover performance for {hospital_name} in real-time.
+
+    Track the following indicators:
+    - Current waiting handovers by hospital
+    - Handovers exceeding critical thresholds (60+ minutes, 90+ minutes)
+    - Real-time average handover duration vs. target
+    - Rate of change in delays (improving or deteriorating)
+
+    Alert on:
+    - Any handovers exceeding 90 minutes
+    - Hospitals with more than 5 outstanding handovers
+    - Average handover time exceeding 30 minutes
+    - Sudden increases in delay metrics
+
+    Provide operational context for the current situation.
+  expected_output: >
+    A real-time performance monitoring report including:
+    1. Current status of all key metrics with alert levels
+    2. List of critical situations requiring immediate attention
+    3. Comparison to targets and normal operating ranges
+    4. Operational impact assessment (ambulances delayed, capacity affected)
+    5. Recommended immediate actions for operations teams
+
+predict_handover_demand:
+  description: >
+    Forecast handover demand and predict potential bottlenecks for {hospital_name}.
+
+    Analyze historical patterns to predict:
+    - Expected number of handovers for the next 4-6 hours
+    - Likely peak demand periods
+    - Probability of delays based on current trajectory
+    - Resource requirements to maintain target performance
+
+    Consider factors such as:
+    - Time of day patterns
+    - Day of week effects
+    - Current baseline performance
+    - Historical delay patterns
+
+    Provide forward-looking insights to support proactive resource allocation.
+  expected_output: >
+    A predictive analytics report containing:
+    1. Hourly forecast of handover arrivals for the next 6 hours
+    2. Predicted delay likelihood and severity
+    3. Identification of upcoming high-risk periods
+    4. Resource recommendations to prevent delays
+    5. Confidence levels for predictions with key assumptions
